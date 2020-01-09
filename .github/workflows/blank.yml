@@ -19,13 +19,12 @@ jobs:
       with:
         kubeconfig: ${{ secrets.DIVMAN_KUBE_CONFIG }}
 
-    - uses: shigupt202/k8s-deploy@users/shigupt/trafficSplitAPIVersionUpdate
+    - uses: Azure/k8s-deploy@users/shigupt/addingKubectlDescribeOutputInLogs
       name: Kubernetes deploy
       with:
         namespace: default
         manifests: |
           deployment.yaml
-          service.yaml
         strategy: canary
         traffic-split-method: smi
         percentage: 50
