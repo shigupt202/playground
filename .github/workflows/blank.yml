@@ -19,7 +19,14 @@ jobs:
       with:
         kubeconfig: ${{ secrets.DIVMAN_KUBE_CONFIG }}
 
-#     - uses: shigupt202/k8s-deploy@users/shigupt/trafficSplitAPIVersionUpdate
-#       name: Kubernetes deploy
-#       with:
-#         namespace: default
+    - uses: shigupt202/k8s-deploy@users/shigupt/trafficSplitAPIVersionUpdate
+      name: Kubernetes deploy
+      with:
+        namespace: default
+        manifests: |
+          deployment.yaml
+          service.yaml
+        strategy: canary
+        traffic-split-method: smi
+        percentage: 50
+        baseline-and-canary-replicas: 1
