@@ -114,6 +114,6 @@ metadata:
 spec:
   containers:
     - name: croc-hunter
-      image: quay.io/lachie83/croc-hunter
+      image: quay.io/lachie83/croc-hunter1
       ports:
         - containerPort: 8080
