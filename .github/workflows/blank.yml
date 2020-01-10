@@ -26,6 +26,6 @@ jobs:
         manifests: |
           deployment.yaml
         strategy: canary
-        traffic-split-method: pod
+        traffic-split-method: smi
         percentage: 30
         baseline-and-canary-replicas: 1
