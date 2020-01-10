@@ -25,6 +25,7 @@ jobs:
         namespace: default
         manifests: |
           deployment.yaml
+          service.yaml
         strategy: canary
         traffic-split-method: smi
         percentage: 30
