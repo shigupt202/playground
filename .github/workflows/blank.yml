@@ -19,7 +19,7 @@ jobs:
       with:
         kubeconfig: ${{ secrets.DIVMAN_KUBE_CONFIG }}
 
-    - uses: shigupt202/k8s-deploy@users/shigupt/trafficSplitUpdateRelease 
+    - uses: shigupt202/k8s-deploy@users/shigupt/trafficSplitVersionUpdate-testing
       name: Kubernetes deploy
       with:
         namespace: default
