@@ -27,6 +27,5 @@ jobs:
           deployment.yaml
           service.yaml
         strategy: canary
-        traffic-split-method: smi
+        traffic-split-method: pod
         percentage: 30
-        baseline-and-canary-replicas: 1
