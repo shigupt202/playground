@@ -15,8 +15,8 @@ stages:
       vmImage: ubuntu-latest
     steps:
 
-    - publish: /deploy_new.yaml
-      artifact: bakedmanifests
+    - publish: bakedmanifests
+      artifact: /deploy_new.yaml
 
 - stage: Deploy
   displayName: 'Deployment stage'
