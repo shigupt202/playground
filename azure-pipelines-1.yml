@@ -1,0 +1,42 @@
+trigger: none
+
+pool: Hosted Ubuntu 1604
+
+variables:
+  system.debug: true
+  
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:  
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+
+    - publish: /deploy_new.yaml
+      artifact: bakedmanifests
+
+- stage: Deploy
+  displayName: 'Deployment stage'
+
+  jobs:
+  - deployment: Deploy
+    displayName: Deploy
+
+    environment: 'divman-env.default'
+    strategy:
+      canary:
+        increments: [25,50]        
+        deploy:
+          steps:
+          - task: KubernetesManifest@0
+            inputs:
+              action: $(strategy.action)
+              kubernetesServiceConnection: 'divman-default'
+              strategy: $(strategy.name)
+              percentage: $(strategy.increment)
+              manifests: '$(Pipeline.Workspace)/bakedmanifests'
+              timeout: '0'
+              
