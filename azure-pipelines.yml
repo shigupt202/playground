@@ -13,5 +13,5 @@ steps:
     displayName: 'Deploy manifest'
     inputs:
       action: 'deploy'
-      kubernetesServiceConnection: 'divman-kubeconfig'
+      kubernetesServiceConnection: 'divman-default'
       manifests: 'deploy_new.yaml'
