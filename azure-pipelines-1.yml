@@ -16,7 +16,7 @@ stages:
     steps:
 
     - publish: bakedmanifests
-      artifact: /deploy_new.yaml
+      artifact: deploy_new.yaml
 
 - stage: Deploy
   displayName: 'Deployment stage'
