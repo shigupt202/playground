@@ -18,4 +18,4 @@ steps:
     trafficSplitMethod: 'smi'
     percentage: '50'
     baselineAndCanaryReplicas: '1'
-    manifests: 'manifests/deploy_new.yaml'
+    manifests: 'deploy_new.yaml'
