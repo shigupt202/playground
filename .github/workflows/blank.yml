@@ -29,4 +29,4 @@ jobs:
           pod.yaml
         strategy: canary
         traffic-split-method: pod
-        percentage: 30
+        percentage: 40
