@@ -26,7 +26,6 @@ jobs:
         manifests: |
           deployment.yaml
           service.yaml
-          pod.yaml
         strategy: canary
         traffic-split-method: pod
         percentage: 60
