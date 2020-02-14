@@ -24,7 +24,7 @@ jobs:
       with:
         namespace: default
         manifests: |
-          deployment.yaml
+          service.yaml
         strategy: canary
         traffic-split-method: pod
         percentage: 60
