@@ -19,7 +19,7 @@ jobs:
       with:
         kubeconfig: ${{ secrets.DIVMAN_KUBE_CONFIG }}
 
-    - uses: Azure/k8s-deploy@users/shigupt/addingKubectlDescribeOutputInLogs-testing
+    - uses: Azure/k8s-deploy@v1
       name: Kubernetes deploy
       with:
         namespace: default
@@ -27,4 +27,4 @@ jobs:
           service.yaml
         strategy: canary
         traffic-split-method: pod
-        percentage: 60
+        percentage: 50
