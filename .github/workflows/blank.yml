@@ -12,20 +12,24 @@ jobs:
       
     - name: Run a multi-line script
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        docker pull nginx
         
     - uses: Azure/k8s-set-context@v1
       with:
         kubeconfig: ${{ secrets.DIVMAN_KUBE_CONFIG }}
 
-    - uses: Azure/k8s-deploy@v1
-      name: Kubernetes deploy
+#     - uses: Azure/k8s-deploy@v1
+#       name: Kubernetes deploy
+#       with:
+#         namespace: default
+#         manifests: |
+#           deployment.yaml
+#           service.yaml
+#         strategy: canary
+#         traffic-split-method: pod
+#         percentage: 50
+
+    - uses: shigupt202/local-container-scan@releases/v1
+      name: Container scan
       with:
-        namespace: default
-        manifests: |
-          deployment.yaml
-          service.yaml
-        strategy: canary
-        traffic-split-method: pod
-        percentage: 50
+        imageName: nginx
