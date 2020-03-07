@@ -29,7 +29,7 @@ jobs:
 #         traffic-split-method: pod
 #         percentage: 50
 
-    - uses: shigupt202/local-container-scan@releases/v1
+    - uses: shigupt202/local-container-scan@staging
       name: Container scan
       with:
         imageName: nginx
