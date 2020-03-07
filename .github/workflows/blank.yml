@@ -33,6 +33,6 @@ jobs:
     - uses: shigupt202/local-container-scan@staging
       name: Container scan
       with:
-        imageName: shivamg202/node-js-sample-image
+        imageName: shivamg202/phippy:test
         username: shivamg202 
         password: ${{ secrets.PASSWORD }}
