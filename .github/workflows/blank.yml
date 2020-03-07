@@ -14,9 +14,9 @@ jobs:
       run: |
         docker pull nginx
         
-    - uses: Azure/k8s-set-context@v1
-      with:
-        kubeconfig: ${{ secrets.DIVMAN_KUBE_CONFIG }}
+#     - uses: Azure/k8s-set-context@v1
+#       with:
+#         kubeconfig: ${{ secrets.DIVMAN_KUBE_CONFIG }}
 
 #     - uses: Azure/k8s-deploy@v1
 #       name: Kubernetes deploy
