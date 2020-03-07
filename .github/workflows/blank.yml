@@ -10,9 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v1
       
-    - name: Run a multi-line script
-      run: |
-        docker pull nginx
+#     - name: Run a multi-line script
+#       run: |
+#         docker pull nginx
         
 #     - uses: Azure/k8s-set-context@v1
 #       with:
