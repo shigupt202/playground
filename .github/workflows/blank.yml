@@ -32,4 +32,6 @@ jobs:
     - uses: shigupt202/local-container-scan@staging
       name: Container scan
       with:
-        imageName: nginx
+        imageName: shivamg202/node-js-sample-image
+        username: shivamg202 
+        password: ${{ secrets.PASSWORD }}
