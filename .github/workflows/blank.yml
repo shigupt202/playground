@@ -36,5 +36,5 @@ jobs:
         imageName: shivamg202/phippy:test
         username: shivamg202 
         password: ${{ secrets.PASSWORD }}
-        whitelist-file: whitelist
+        whitelist-file: .trivyignore
         github-token: ${{ secrets.GITHUB_TOKEN }}
