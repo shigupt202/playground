@@ -40,3 +40,4 @@ jobs:
         cd /home/runner/work/playground/playground/_temp/containerScanWhitelist
         ls
         cat whitelist
+        
