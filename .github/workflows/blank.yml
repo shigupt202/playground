@@ -38,6 +38,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         whitelist-file: .trivyignore
         github-token: ${{ secrets.GITHUB_TOKEN }}
+   
     - name: View Whitelist file
       run: |
         cat /home/runner/work/playground/playground/_temp/containerScanWhitelist/.trivyignore
