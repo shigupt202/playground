@@ -29,7 +29,7 @@ jobs:
       with:
         image: testing
         tag: latest
-        registry: https://registry.hub.docker.com
+        registry: shivamg202
         dockerfile: Dockerfile
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
