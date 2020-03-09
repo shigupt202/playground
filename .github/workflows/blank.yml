@@ -41,5 +41,5 @@ jobs:
    
     - name: View Whitelist file
       run: |
-        cd /home/runner/work/playground/playground/_temp/containerScanWhitelist/.trivyignore
+        cd /home/runner/work/playground/playground/_temp/containerScanWhitelist
         ls
