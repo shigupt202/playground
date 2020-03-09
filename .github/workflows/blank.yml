@@ -37,7 +37,7 @@ jobs:
     - uses: shigupt202/local-container-scan@releases/v1
       name: Container scan
       with:
-        imageName: nginx:latest
+        imageName: testing:latest
 #         username: shivamg202 
 #         password: ${{ secrets.PASSWORD }}
         #whitelist-file: whitelist
