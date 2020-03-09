@@ -25,6 +25,14 @@ jobs:
 #         strategy: canary
 #         traffic-split-method: pod
 #         percentage: 50
+    - uses: mr-smithers-excellent/docker-build-push@v2
+      with:
+        image: testing
+        tag: latest
+        registry: https://registry.hub.docker.com
+        dockerfile: Dockerfile
+        username: shivamg202
+        password: ${{ secrets.PASSWORD }}
 
     - uses: shigupt202/local-container-scan@releases/v1
       name: Container scan
