@@ -31,8 +31,8 @@ jobs:
       name: Container scan
       with:
         imageName: nginx
-#         username: shivamg202 
-#         password: ${{ secrets.PASSWORD }}
+        username: shivamg202 
+        password: ${{ secrets.PASSWORD }}
         whitelist-file: whitelist
    
     - name: View Whitelist file
