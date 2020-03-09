@@ -27,13 +27,10 @@ jobs:
 #         traffic-split-method: pod
 #         percentage: 50
 
-    - name: Docker build
-      run: docker build 
-      
     - uses: shigupt202/local-container-scan@staging
       name: Container scan
       with:
-        imageName: nginx:latest
+        imageName: node:latest
 #         username: shivamg202 
 #         password: ${{ secrets.PASSWORD }}
         #whitelist-file: whitelist
