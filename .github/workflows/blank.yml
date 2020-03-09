@@ -36,10 +36,11 @@ jobs:
         imageName: shivamg202/phippy:test
         username: shivamg202 
         password: ${{ secrets.PASSWORD }}
-        whitelist-file: .trivyignore
+        whitelist-file: whitelist
         github-token: ${{ secrets.GITHUB_TOKEN }}
    
     - name: View Whitelist file
       run: |
         cd /home/runner/work/playground/playground/_temp/containerScanWhitelist
         ls
+        cat whitelist
