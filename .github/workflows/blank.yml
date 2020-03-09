@@ -37,7 +37,6 @@ jobs:
         username: shivamg202 
         password: ${{ secrets.PASSWORD }}
         whitelist-file: whitelist
-        github-token: ${{ secrets.GITHUB_TOKEN }}
    
     - name: View Whitelist file
       run: |
