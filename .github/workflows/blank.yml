@@ -42,6 +42,7 @@ jobs:
 #         password: ${{ secrets.PASSWORD }}
         #whitelist-file: whitelist
       
+      
     - name: View Whitelist file
       run: |
         cd /home/runner/work/playground/playground/_temp/containerScanWhitelist
