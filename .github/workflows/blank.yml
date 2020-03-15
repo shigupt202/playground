@@ -40,9 +40,8 @@ jobs:
       with:
         image-name: shiguptgotemp
         add-CIS-checks: True 
-        username: shigupt
+        username: shivamg202
         password: ${{ secrets.PASSWORD }}
         whitelist-file: whitelist   
         severity-threshold: LOW 
-        registry-url: divman.azurecr.io
           
