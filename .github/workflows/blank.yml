@@ -38,10 +38,11 @@ jobs:
     - uses: shigupt202/local-container-scan@users/shigupt/registry-testing
       name: Container scan
       with:
-        image-name: shivamg202/phippy:test
+        image-name: shiguptgotemp
         add-CIS-checks: True 
-        username: shivamg202 
+        username: shigupt@microsoft.com 
         password: ${{ secrets.PASSWORD }}
         whitelist-file: whitelist   
         severity-threshold: LOW 
+        registry-url: divman.azurecr.io
           
