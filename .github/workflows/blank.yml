@@ -40,7 +40,7 @@ jobs:
       with:
         image-name: shiguptgotemp
         add-CIS-checks: True 
-        username: shigupt@microsoft.com 
+        username: shigupt
         password: ${{ secrets.PASSWORD }}
         whitelist-file: whitelist   
         severity-threshold: LOW 
