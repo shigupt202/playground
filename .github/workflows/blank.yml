@@ -38,7 +38,7 @@ jobs:
     - uses: shigupt202/local-container-scan@users/shigupt/registry-testing
       name: Container scan
       with:
-        image-name: shiguptgotemp
+        image-name: nginx
         add-CIS-checks: True 
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
