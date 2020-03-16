@@ -33,7 +33,6 @@ jobs:
 #         dockerfile: Dockerfile
 #         username: shivamg202
 #         password: ${{ secrets.PASSWORD }}
-
       
     - uses: shigupt202/local-container-scan@users/shigupt/testing
       name: Container scan
