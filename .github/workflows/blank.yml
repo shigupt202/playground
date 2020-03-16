@@ -35,6 +35,10 @@ jobs:
 #         username: shivamg202
 #         password: ${{ secrets.PASSWORD }}
 
+
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v1     
+      
     - uses: shigupt202/local-container-scan@users/shigupt/registry-testing
       name: Container scan
       with:
@@ -43,5 +47,6 @@ jobs:
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
         whitelist-file: whitelist   
-        severity-threshold: UNKNOWN                    
+        severity-threshold: UNKNOWN        
+                 
           
