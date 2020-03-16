@@ -2,7 +2,7 @@ name: CI
 on: [push]
 jobs:
   build:
-    runs-on: macos-latest                 
+    runs-on: ubuntu-latest                 
                       
     steps:
     - uses: actions/checkout@v1      
@@ -37,7 +37,7 @@ jobs:
     - uses: shigupt202/local-container-scan@users/shigupt/registry-testing
       name: Container scan
       with:
-        image-name: oracle
+        image-name: nginx
         add-CIS-checks: True 
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
