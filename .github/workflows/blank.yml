@@ -36,7 +36,7 @@ jobs:
 #         password: ${{ secrets.PASSWORD }}
 
       
-    - uses: shigupt202/local-container-scan@users/shigupt/registry-testing
+    - uses: shigupt202/local-container-scan@users/shigupt/testing
       name: Container scan
       with:
         image-name: nginx
