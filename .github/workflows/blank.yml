@@ -10,7 +10,7 @@ jobs:
 #     - name: Run a multi-line script
 #       run: |
 #         docker pull nginx
-        
+  
 #     - uses: Azure/k8s-set-context@v1
 #       with:
 #         kubeconfig: ${{ secrets.DIVMAN_KUBE_CONFIG }}
@@ -34,10 +34,10 @@ jobs:
 #         username: shivamg202
 #         password: ${{ secrets.PASSWORD }}
 
-    - uses: shigupt202/local-container-scan@users/shigupt/registry-testing
+    - uses: shigupt202/local-container-scan@users/shigupt/testing
       name: Container scan
       with:
-        image-name: nginx
+        image-name: hello-world
         add-CIS-checks: True 
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
