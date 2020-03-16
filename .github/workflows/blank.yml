@@ -38,7 +38,7 @@ jobs:
     - uses: shigupt202/local-container-scan@users/shigupt/testing
       name: Container scan
       with:
-        image-name: divman.azurecr.io/shiguptgotemp
+        image-name: divman.azurecr.io/shiguptgotemp:11157899
         add-CIS-checks: True 
         username: divman
         password: ${{ secrets.PASSWORD }}
