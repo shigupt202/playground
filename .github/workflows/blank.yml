@@ -34,7 +34,7 @@ jobs:
 #         username: shivamg202
 #         password: ${{ secrets.PASSWORD }}
       
-    - uses: shigupt202/local-container-scan@users/shigupt/testing
+    - uses: shigupt202/local-container-scan@users/shigupt/registry-testing
       name: Container scan
       with:
         image-name: shivamg202/phippy:test
