@@ -5,7 +5,6 @@ jobs:
     runs-on: ubuntu-latest   
                         
     steps:
-     - uses: actions/checkout@v1      
       
 #     - name: Run a multi-line script
 #       run: |
@@ -35,6 +34,7 @@ jobs:
 #         password: ${{ secrets.PASSWORD }}
       
       
+    - uses: actions/checkout@v1      
     - uses: shigupt202/local-container-scan@users/shigupt/registry-testing
       name: Container scan
       with:
