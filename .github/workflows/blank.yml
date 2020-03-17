@@ -37,11 +37,11 @@ jobs:
     - uses: shigupt202/local-container-scan@users/shigupt/testing
       name: Container scan
       with:
-        image-name: nginx
+        image-name: shivamg202/phippy:test
         add-CIS-checks: True 
-#         username: divman
-#         password: ${{ secrets.PASSWORD }}
+        username: shivamg202
+        password: ${{ secrets.PASSWORD }}
         whitelist-file: whitelist   
-        severity-threshold: abcd        
+        severity-threshold: LOW        
                  
           
