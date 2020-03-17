@@ -33,7 +33,6 @@ jobs:
 #         username: shivamg202
 #         password: ${{ secrets.PASSWORD }}
       
-      
     - uses: actions/checkout@v1      
     - uses: shigupt202/local-container-scan@users/shigupt/registry-testing
       name: Container scan
