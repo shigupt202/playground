@@ -37,10 +37,10 @@ jobs:
     - uses: shigupt202/local-container-scan@users/shigupt/registry-testing
       name: Container scan
       with:
-        image-name: divman.azurecr.io/shiguptgotemp:11157899
+        image-name: nginx
         add-CIS-checks: True 
-        username: divman
-        password: ${{ secrets.PASSWORD }}
+#         username: divman
+#         password: ${{ secrets.PASSWORD }}
         whitelist-file: whitelist   
         severity-threshold: UNKNOWN        
                  
