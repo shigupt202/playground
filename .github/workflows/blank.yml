@@ -37,7 +37,7 @@ jobs:
     - uses: shigupt202/local-container-scan@users/shigupt/updatingWhitelistFormat
       name: Container scan
       with:
-        image-name: nginx
+        image-name: nginx:latest
         add-CIS-checks: True 
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
