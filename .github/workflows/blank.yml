@@ -34,10 +34,10 @@ jobs:
 #         password: ${{ secrets.PASSWORD }}
       
     - uses: actions/checkout@v1      
-    - uses: shigupt202/local-container-scan@users/shigupt/registry-testing
+    - uses: shigupt202/local-container-scan@users/shigupt/handlingOutput
       name: Container scan
       with:
-        image-name: shivamg202/phippy:test
+        image-name: nginx
         add-CIS-checks: True 
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
