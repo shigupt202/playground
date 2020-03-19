@@ -1,0 +1,7 @@
+general:
+  common_vulnerabilities:
+    - CVE-2003-1307
+    - CVE-2007-0086
+  best_practice_vulnerabilities:
+    - CIS-DI-0001
+    - CIS-DI-0005
