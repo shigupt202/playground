@@ -41,6 +41,5 @@ jobs:
         add-CIS-checks: True 
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
-        whitelist-file: whitelist   
         severity-threshold: LOW                                 
           
