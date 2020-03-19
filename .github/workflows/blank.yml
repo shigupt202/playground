@@ -41,5 +41,5 @@ jobs:
         add-CIS-checks: True 
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
-        severity-threshold: LOW                                         
+        severity-threshold: LOW                                      
           
