@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@v1   
-    - name: Docker build and push
+    - name: Docker build
       run: |
-        docker build -f ${{ github.workspace }}/Dockerfile -t testImage . 
+        docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
     - uses: shigupt202/local-container-scan@users/shigupt/addingWhitelistHandler
       name: Container scan
       with:
-        image-name: testImage                                 
+        image-name: testimage                                 
           
