@@ -13,6 +13,6 @@ jobs:
       with:
 #         image-name: testimage    
         image-name: shivamg202/phippy:test  
-        username: shigupt202
+        username: shivamg202
         password: ${{ secrets.PASSWORD }}                            
           
