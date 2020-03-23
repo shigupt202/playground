@@ -8,7 +8,7 @@ jobs:
 #     - name: Docker build
 #       run: |
 #         docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
-    - uses: shigupt202/local-container-scan@users/shigupt/output-formatting
+    - uses: shigupt202/local-container-scan@users/shigupt/releases/v1
       name: Container scan
       with:
 #         image-name: testimage    
