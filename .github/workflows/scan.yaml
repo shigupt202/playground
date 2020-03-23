@@ -12,7 +12,7 @@ jobs:
       name: Container scan
       with:
 #         image-name: testimage    
-        image-name: shivamg202/phippy:test
+        image-name: shivamg202/phippy1:test
         username: shivamg2020
         password: ${{ secrets.PASSWORD }}                        
           
