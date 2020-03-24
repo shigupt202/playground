@@ -13,6 +13,6 @@ jobs:
       with:
 #         image-name: testimage    
         image-name: nginx
-        username: shivamg2020
+        username: shivamg202
         password: ${{ secrets.PASSWORD }}                   
     
