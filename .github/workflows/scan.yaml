@@ -15,4 +15,3 @@ jobs:
 #         image-name: nginx
 #         username: shivamg202
 #         password: ${{ secrets.PASSWORD }}                 
-
