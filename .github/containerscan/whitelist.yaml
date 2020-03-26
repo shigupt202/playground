@@ -7,7 +7,6 @@ general:
     - CVE-2007-1743
     - CVE-2011-3374
   bestPracticeVulnerabilities:
-    - CIS-DI-0001
     - CIS-DI-0005
     - DKL-LI-0003
     - CIS-DI-0008
