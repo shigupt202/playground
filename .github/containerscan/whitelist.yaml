@@ -9,3 +9,5 @@ general:
   bestPracticeVulnerabilities:
     - CIS-DI-0001
     - CIS-DI-0005
+    - DKL-LI-0003
+    - CIS-DI-0008
