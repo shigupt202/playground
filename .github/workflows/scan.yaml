@@ -14,4 +14,4 @@ jobs:
 #         image-name: testimage    
         image-name: shivamg202/phippy:test
         username: shivamg2020
-        password: ${{ secrets.PASSWORD }}            
+        password: ${{ secrets.PASSWORD }}           
