@@ -2,16 +2,16 @@ FROM golang:latest
 
 RUN mkdir /app 
 
-ADD . /app/ 
+# ADD . /app/ 
 
-WORKDIR /app
+# WORKDIR /app
 
-RUN go get -d
+# RUN go get -d
 
-RUN go build -o main . 
+# RUN go build -o main . 
 
-RUN echo "Hello-world" 
+# RUN echo "Hello-world" 
 
-CMD ["/app/main"]
+# CMD ["/app/main"]
 
-EXPOSE 80
+# EXPOSE 80
