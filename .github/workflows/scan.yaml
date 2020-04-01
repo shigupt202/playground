@@ -10,8 +10,11 @@ jobs:
 #         docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
     - uses: Azure/container-scan@users/shigupt/settingActionOutput
       name: Container scan
+      id: scan
       with:
 #         image-name: testimage    
         image-name: nginx
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
+    - name: Output
+      run: cat ${{steps.scan.outputs.scan-report}}
