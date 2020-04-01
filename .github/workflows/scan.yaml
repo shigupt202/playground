@@ -8,13 +8,13 @@ jobs:
 #     - name: Docker build
 #       run: |
 #         docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
-    - uses: Azure/container-scan@users/shigupt/createScanReport
+    - uses: Azure/container-scan@users/shigupt/parsingStdoutForErrors
       name: Container scan
       id: scan
-      continue-on-error: true
+#       continue-on-error: true
       with:
 #         image-name: testimage    
-        image-name: nginx
+        image-name: nginx11
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
     - name: Output
