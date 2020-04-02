@@ -6,10 +6,10 @@ general:
     - CVE-2003-1580
     - CVE-2007-1743
     - CVE-2011-3374
-  bestPracticeVulnerabilities:
-    - CIS-DI-0005
-#     - DKL-LI-0003
-#     - CIS-DI-0008
-#     - CIS-DI-0001
-#     - CIS-DI-0006
-#     - DKL-DI-0006
+#   bestPracticeVulnerabilities:
+#     - CIS-DI-0005
+# #     - DKL-LI-0003
+# #     - CIS-DI-0008
+# #     - CIS-DI-0001
+# #     - CIS-DI-0006
+# #     - DKL-DI-0006
