@@ -17,6 +17,6 @@ jobs:
         image-name: nginx
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
-        add-CIS-checks: true
+        add-CIS-checks: false
     - name: Output
       run: cat ${{steps.scan.outputs.scan-report}}
