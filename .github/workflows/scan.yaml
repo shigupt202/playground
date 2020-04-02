@@ -8,7 +8,7 @@ jobs:
 #     - name: Docker build
 #       run: |
 #         docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
-    - uses: Azure/container-scan@users/shigupt/parsingStdoutForErrors
+    - uses: Azure/container-scan@uusers/shigupt/createScanReport
       name: Container scan
       id: scan
 #       continue-on-error: true
