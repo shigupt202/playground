@@ -14,7 +14,7 @@ jobs:
       continue-on-error: true
       with:
 #         image-name: testimage    
-        image-name: nginx
+        image-name: alpine
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
 #         add-CIS-checks: true
