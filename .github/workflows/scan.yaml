@@ -11,7 +11,7 @@ jobs:
     - uses: Azure/container-scan@users/shigupt/createScanReport
       name: Container scan
       id: scan
-#       continue-on-error: true
+      continue-on-error: true
       with:
 #         image-name: testimage    
         image-name: nginx
