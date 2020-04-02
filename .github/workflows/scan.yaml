@@ -19,4 +19,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
 #         add-CIS-checks: true
     - name: Output
-      run: cat ${{steps.scan.outputs.scan-report}}
+      run: cat ${{steps.scan.outputs.scan-report-path}}
