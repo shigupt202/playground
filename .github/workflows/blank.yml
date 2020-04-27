@@ -37,7 +37,7 @@ jobs:
 #         password: ${{ secrets.PASSWORD }}
       
     - uses: actions/checkout@v1      
-    - uses: shigupt202/local-container-scan@users/shigupt/addingWhitelistHandler
+    - uses: azure/container-scan@releases/v0
       name: Container scan
       with:
         image-name: nginx
