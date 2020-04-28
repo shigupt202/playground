@@ -13,8 +13,7 @@ jobs:
       id: scan
       continue-on-error: true
       with:
-#         image-name: testimage    
-        image: nginx
+        image-name: testimage    
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
 #         add-CIS-checks: true
