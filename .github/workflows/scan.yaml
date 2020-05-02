@@ -8,13 +8,12 @@ jobs:
 #     - name: Docker build
 #       run: |
 #         docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
-    - uses: Azure/container-scan@users/shigupt/validateRequiredInputs
+    - uses: Azure/container-scan@users/shigupt/fixingWhitelistIssues
       name: Container scan
       id: scan
       continue-on-error: true
       with:
-        image-name: nginx    
-        token: '' 
+        image-name: nginx 
         username: shivamg202
         password: ${{ secrets.PASSWORD }}
 #         add-CIS-checks: true
