@@ -5,17 +5,18 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@v1   
+    - uses: actions/setup-helm
 #     - name: Docker build
 #       run: |
 #         docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
-    - uses: Azure/container-scan@releases/v0
-      name: Container scan
-      id: scan
-#       continue-on-error: true
-      with:
-        image-name: nginx 
-        username: shivamg202
-        password: ${{ secrets.PASSWORD }}
-#         add-CIS-checks: true
-    - name: Output
-      run: cat ${{steps.scan.outputs.scan-report-path}}
+#     - uses: Azure/container-scan@releases/v0
+#       name: Container scan
+#       id: scan
+# #       continue-on-error: true
+#       with:
+#         image-name: nginx 
+#         username: shivamg202
+#         password: ${{ secrets.PASSWORD }}
+# #         add-CIS-checks: true
+#     - name: Output
+#       run: cat ${{steps.scan.outputs.scan-report-path}}
