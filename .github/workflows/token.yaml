@@ -1,5 +1,6 @@
 name: CI
-on: [push]
+on: 
+  member: shigupt202
 
 jobs:
   build:
