@@ -6,17 +6,17 @@ jobs:
     steps:
     - uses: actions/checkout@v1   
 #     - uses: azure/setup-helm@users/shigupt/fixingHelmLatestReleases
-#     - name: Docker build
-#       run: |
-#         docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
+    - name: Docker build
+      run: |
+        docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
     - uses: Azure/container-scan@users/shigupt/replaceWhitelistToAllowedlist
       name: Container scan
       id: scan
-      continue-on-error: true
+#       continue-on-error: true
       with:
-        image-name: nginx 
+        image-name: testimage 
 #         username: shivamg202
 #         password: ${{ secrets.PASSWORD }}
 # #         add-CIS-checks: true
-    - name: Output
-      run: cat ${{steps.scan.outputs.scan-report-path}}
+#     - name: Output
+#       run: cat ${{steps.scan.outputs.scan-report-path}}
