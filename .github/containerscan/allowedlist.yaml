@@ -6,6 +6,8 @@ general:
     - CVE-2003-1580
     - CVE-2007-1743
     - CVE-2011-3374
+    - CVE-2020-8492 
+    - CVE-2013-7445 
     
   bestPracticeViolations:
     - CIS-DI-0005
