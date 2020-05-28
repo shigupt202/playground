@@ -10,9 +10,9 @@ general:
     - CVE-2013-7445 
     
   bestPracticeViolations:
-    - CIS-DI-0005
-    - DKL-LI-0003
-    - CIS-DI-0008
-    - CIS-DI-0001
-    - CIS-DI-0006
-    - DKL-DI-0006
+#     - CIS-DI-0005
+#     - DKL-LI-0003
+#     - CIS-DI-0008
+#     - CIS-DI-0001
+#     - CIS-DI-0006
+#     - DKL-DI-0006
