@@ -11,5 +11,5 @@ jobs:
     - uses: azure/k8s-bake@users/shigupt/addingInit
       with:
         renderEngine: 'helm'
-        helmChart: 'https://github.com/helm/charts/tree/master/stable/cerebro'
+        helmChart: './demo-chart.tar.gz'
         silent: 'false'
