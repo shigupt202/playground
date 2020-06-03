@@ -11,5 +11,5 @@ jobs:
     - uses: azure/k8s-bake@users/shigupt/addingInit
       with:
         renderEngine: 'helm'
-        helmChart: './demo-chart.tar.gz'
+        helmChart: './demo-chart'
         silent: 'false'
