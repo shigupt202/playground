@@ -10,6 +10,6 @@ jobs:
         version: '2.14.1'
     - uses: azure/k8s-bake@users/shigupt/addingInit
       with:
-        renderEngine: 'Helm'
+        renderEngine: 'helm'
         helmChart: 'stable/cerebro'
         silent: 'false'
