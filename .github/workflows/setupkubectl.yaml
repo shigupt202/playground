@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@v1  
-    - uses: azure/setup-kubectl@users/shigupt/addPath
-      with:
-        version: 'v1.14.8'
+#     - uses: azure/setup-kubectl@users/shigupt/addPath
+#       with:
+#         version: 'v1.14.8'  
     - run: 'kubectl version'
 
