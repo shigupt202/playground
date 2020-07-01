@@ -8,7 +8,7 @@ jobs:
     - name: Docker build
       run: |
         docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
-    - uses: Azure/container-scan@users/shigupt/unitTests
+    - uses: Azure/container-scan@v0
       name: Container scan
       id: scan
 #       continue-on-error: true
