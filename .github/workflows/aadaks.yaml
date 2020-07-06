@@ -10,5 +10,6 @@ jobs:
         resource-group: 'aadpocResourceGroup'
         cluster-name: 'aadpocCluster'
         
+    - run: 'Get-Content -Path KUBECONFIG'
     - run: 'kubectl get pods'
       
