@@ -10,5 +10,5 @@ jobs:
         resource-group: 'aadpocResourceGroup'
         cluster-name: 'aadpocCluster'
         
-    - run: 'kubectl get nodes'
+    - run: 'kubectl get pods'
       
