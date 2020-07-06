@@ -11,3 +11,4 @@ jobs:
         cluster-name: 'aadpocCluster'
         
     - run: 'kubectl get nodes'
+      
