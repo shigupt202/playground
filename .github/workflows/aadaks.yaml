@@ -7,8 +7,8 @@ jobs:
     - uses: azure/aks-set-context@v1
       with:
         creds: '${{ secrets.AZURE_CREDS }}'
-        resource-group: 'aadpocResourceGroup'
-        cluster-name: 'aadpocCluster'
+        resource-group: 'AzureArcTest'
+        cluster-name: 'AzureArcTesCluster'
         
     - run: 'cat $KUBECONFIG'
     - run: 'kubectl get pods'
