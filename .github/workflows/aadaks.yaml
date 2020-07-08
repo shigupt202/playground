@@ -1,15 +1,18 @@
 name: CI
-on: [push]
+on: [pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/aks-set-context@v1
-      with:
-        creds: '${{ secrets.AZURE_CREDS }}'
-        resource-group: 'AzureArcTest'
-        cluster-name: 'AzureArcTesCluster'
+#     - uses: azure/aks-set-context@v1
+#       with:
+#         creds: '${{ secrets.AZURE_CREDS }}'
+#         resource-group: 'AzureArcTest'
+#         cluster-name: 'AzureArcTesCluster'
         
-    - run: 'cat $KUBECONFIG'
-    - run: 'kubectl get pods'
+#     - run: 'cat $KUBECONFIG'
+#     - run: 'kubectl get pods'
+    - uses: azure/container-scan@v0
+      with:
+        image-name: nginx  
       
