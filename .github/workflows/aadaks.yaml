@@ -13,3 +13,4 @@ jobs:
         aad-creds: '${{ secrets.AZURE_AADCREDS }}'
         
     - run: 'kubectl get nodes'
+
