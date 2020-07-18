@@ -11,4 +11,3 @@ jobs:
         cluster-name: 'testARCclus1'
         arc-enabled: 'true' 
 
-
