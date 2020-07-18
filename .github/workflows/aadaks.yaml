@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/aks-set-context@users/shigupt/addArcSupport
+    - uses: azure/aks-set-context@users/shigupt/arc-test
       with:
         creds: '${{ secrets.AZURE_CREDS }}'
         resource-group: 'testARCrg'
