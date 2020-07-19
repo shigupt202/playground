@@ -15,4 +15,3 @@ jobs:
     - run: cat $KUBECONFIG
         
     - run: 'kubectl get nodes'
-
