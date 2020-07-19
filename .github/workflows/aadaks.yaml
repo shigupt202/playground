@@ -10,7 +10,7 @@ jobs:
         resource-group: 'testARCrg'
         cluster-name: 'testARCclus1'
         arc-enabled: 'true'
-#         aad-creds: '${{ secrets.AZURE_AADCREDS }}'
+        aad-creds: '${{ secrets.AZURE_AADCREDS }}'
       
     - run: cat $KUBECONFIG
         
