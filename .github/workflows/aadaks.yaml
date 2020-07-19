@@ -12,7 +12,7 @@ jobs:
         arc-enabled: 'true'
         aad-creds: '${{ secrets.AZURE_AADCREDS }}'
       
-    - run: cat $PATH
+    - run: echo $PATH
         
     - run: 'kubectl get nodes'
       
