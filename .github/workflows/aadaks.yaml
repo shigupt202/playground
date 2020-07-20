@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: azure/aks-set-context@users/shigupt/arc-test
       with:
-        creds: '${{ secrets.AZURE_CREDS }}'
+        creds: '${{ secrets.AZURE_CREDS_NEW }}'
         resource-group: 'testARCrg'
         cluster-name: 'testARCclus1'
         arc-enabled: 'true'
