@@ -6,9 +6,9 @@ jobs:
     steps:
     - uses: azure/aks-set-context@users/shigupt/arc-test
       with:
-        creds: '${{ secrets.AZURE_CREDS_NEW }}'
-        resource-group: 'testARCrg'
-        cluster-name: 'testARCclus1'
+        creds: '${{ secrets.AZURE_CREDS_ONPREM }}'
+        resource-group: 'shiguptOnpremARC'
+        cluster-name: 'onpremARCClus'
         arc-enabled: 'true'
         aad-creds: '${{ secrets.AZURE_AADCREDS }}'
       
