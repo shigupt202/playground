@@ -9,7 +9,6 @@ jobs:
         creds: '${{ secrets.AZURE_CREDS_ONPREM }}'
         resource-group: 'shiguptOnpremARC'
         cluster-name: 'onpremARCClus'
-        arc-enabled: 'true'
         aad-creds: '${{ secrets.AZURE_AADCREDS }}'
       
     - run: cat $KUBECONFIG
