@@ -13,6 +13,6 @@ jobs:
       
     - run: cat $KUBECONFIG
         
-    - run: 'kubectl get nodes'
+    - run: 'kubectl apply -f ./deployment.yaml'
       
   
