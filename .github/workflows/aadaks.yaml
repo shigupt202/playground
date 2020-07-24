@@ -9,7 +9,7 @@ jobs:
         creds: '${{ secrets.AZURE_CREDS_ONPREM }}'
         resource-group: 'shigupt-rg'
         cluster-name: 'shigupt'
-#         aad-creds: '${{ secrets.AZURE_AADCREDS }}'
+        aad-creds: '${{ secrets.AZURE_AADCREDS }}'
       
     - run: cat $KUBECONFIG
         
