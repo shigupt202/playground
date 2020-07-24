@@ -7,8 +7,8 @@ jobs:
     - uses: azure/aks-set-context@users/shigupt/arc-test
       with:
         creds: '${{ secrets.AZURE_CREDS_ONPREM }}'
-        resource-group: 'shigupt-rg'
-        cluster-name: 'shigupt'
+        resource-group: 'shiguptOnpremARC'
+        cluster-name: 'onpremARCClus'
         aad-creds: '${{ secrets.AZURE_AADCREDS }}'
       
     - run: cat $KUBECONFIG
