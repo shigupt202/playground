@@ -4,6 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
+    - uses: actions/checkout@v1
     - uses: azure/aks-set-context@users/shigupt/arc-test
       with:
         creds: '${{ secrets.AZURE_CREDS_ONPREM }}'
