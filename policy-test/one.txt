@@ -1,7 +1,7 @@
 {
     "properties": {
       "displayName": "nrms-kubernet-require-azure-networkplugin_1.0",
-      "policyType": "Custom",
+      "policyType": "Test",
       "mode": "All",
       "metadata": {
         "createdBy": "1f75b9dd-4f1d-4e80-9521-321a8b1f5764",
