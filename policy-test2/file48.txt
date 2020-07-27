@@ -1,0 +1,87 @@
+{
+    "properties": {
+      "displayName": "nrms-kubernet-require-azure-networkplugin_1.0",
+      "policyType": "Test",
+      "mode": "All",
+      "metadata": {
+        "createdBy": "1f75b9dd-4f1d-4e80-9521-321a8b1f5764",
+        "createdOn": "2019-04-01T22:23:57.6004986Z",
+        "updatedBy": null,
+        "updatedOn": null
+      },
+      "parameters": {
+        "effect": {
+          "type": "String",
+          "metadata": {
+            "displayName": "Effect",
+            "description": "Enable or disable the execution of the policy"
+          },
+          "allowedValues": [
+            "Audit",
+            "Deny",
+            "Disabled"
+          ],
+          "defaultValue": "Audit"
+        },
+        "allowedLocations": {
+          "type": "Array",
+          "metadata": {
+            "displayName": "Allowed locations",
+            "description": "The list of locations that can be specified when deploying resources.",
+            "strongType": "location"
+          }
+        }
+      },
+      "policyRule": {
+        "if": {
+          "anyOf": [
+            {
+              "allOf": [
+                {
+                  "field": "type",
+                  "equals": "Microsoft.ContainerService/managedClusters"
+                },
+                {
+                  "field": "location",
+                  "in": "[parameters('allowedLocations')]"
+                },
+                {
+                  "not": {
+                    "field": "Microsoft.ContainerService/managedClusters/networkProfile.networkPlugin",
+                    "notIn": [
+                      "null",
+                      ""
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "allOf": [
+                {
+                  "field": "type",
+                  "equals": "Microsoft.ContainerService/managedClusters"
+                },
+                {
+                  "field": "location",
+                  "in": "[parameters('allowedLocations')]"
+                },
+                {
+                  "not": {
+                    "field": "Microsoft.ContainerService/managedClusters/networkProfile.networkPlugin",
+                    "equals": "azure"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "then": {
+          "effect": "[parameters('effect')]"
+        }
+      }
+    },
+    "id": "/providers/Microsoft.Management/managementgroups/48fed3a1-0814-4847-88ce-b766155f2792/providers/Microsoft.Authorization/policyDefinitions/26db8d27b6fa91aa",
+    "type": "Microsoft.Authorization/policyDefinitions",
+    "name": "26db8d27b6fa91aa"
+  }148
