@@ -4,10 +4,14 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/aks-set-context@users/shigupt/addArcSupport
+    - uses: actions/checkout@v1   
+#     - name: Docker build
+#       run: |
+#         docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
+    - uses: Azure/container-scan@releases/v0
+      name: Container scan
+      id: scan
+#       continue-on-error: true
       with:
-        creds: '${{ secrets.AZURE_CREDS }}'
-        resource-group: 'testARCrg'
-        cluster-name: 'testARCclus1'
-        arc-enabled: 'true' 
-
+        image-name: nginx 
+#         add-CIS-checks: true
