@@ -4,10 +4,17 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/aks-set-context@users/shigupt/addArcSupport
+    - uses: actions/checkout@master
+    - uses: azure/login@v1
       with:
-        creds: '${{ secrets.AZURE_CREDS }}'
-        resource-group: 'testARCrg'
-        cluster-name: 'testARCclus1'
-        arc-enabled: 'true' 
-
+        creds: '${{ secrets.AZURE_CREDS_ONPREM }}' 
+    - uses: azure/aks-set-context@users/shigupt/arc-test
+      with:
+        resource-group: 'shiguptOnpremARC'
+        cluster-name: 'onpremARCClus'
+        aad-creds: '${{ secrets.AZURE_AADCREDS }}'
+      
+    - run: cat $KUBECONFIG
+        
+    - run: 'kubectl apply -f $GITHUB_WORKSPACE/deployment.yaml'     
+  
