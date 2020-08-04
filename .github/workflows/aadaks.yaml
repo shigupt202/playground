@@ -16,5 +16,5 @@ jobs:
       
     - run: cat $KUBECONFIG
         
-    - run: 'kubectl apply -f $GITHUB_WORKSPACE/deployment.yaml'      
+    - run: 'kubectl apply -f $GITHUB_WORKSPACE/deployment.yaml'     
   
