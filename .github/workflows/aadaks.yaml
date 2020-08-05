@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - run: echo ${{ secrets.TEST_SECRET }}
+    - run: echo ${{ secrets.TEST_SECRET }} | cut -d'_' -f 5
 #     - uses: actions/checkout@master
 #     - uses: azure/login@v1
 #       with:
