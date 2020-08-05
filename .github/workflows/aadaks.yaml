@@ -4,6 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
+    - run: echo ${{ secrets.TEST_SECRET }}
     - uses: azure/aks-set-context@users/shigupt/addArcSupport
       with:
         creds: '${{ secrets.AZURE_CREDS }}'
