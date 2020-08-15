@@ -9,7 +9,8 @@ jobs:
     - uses: azure/login@v1
       with:
         creds: '${{ secrets.AZURE_CREDS_ONPREM }}' 
-    - uses: azure/aks-set-context@users/shigupt/arc-test
+#     - uses: azure/aks-set-context@users/shigupt/arc-test
+    - uses: azure/arc-k8s-set-context@users/shigupt/testing
       with:
         resource-group: 'shiguptOnpremARC'
         cluster-name: 'onpremARCClus'
