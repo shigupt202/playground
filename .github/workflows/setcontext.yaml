@@ -7,5 +7,5 @@ jobs:
     - uses: azure/k8s-set-context@v1
       with:
         kubeconfig: '${{ secrets.SHIGUPT_KUBECONFIG }}'
-        context: 'shigupt'
+#         context: 'shigupt'
     - run: 'kubectl config view'
