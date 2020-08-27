@@ -11,4 +11,3 @@ jobs:
         kubeconfig: '${{ secrets.SHIGUPT_KUBECONFIG }}'
         context: shigupt
     - run: 'kubectl config get-contexts'
-
