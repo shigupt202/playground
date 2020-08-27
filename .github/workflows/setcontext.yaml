@@ -4,8 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/k8s-set-context@users/shigupt/add-env-variable
-      continue-on-error: true
+    - uses: azure/k8s-set-context@v1
       with:
         method: kubeconfig 
         kubeconfig: '${{ secrets.SHIGUPT_KUBECONFIG }}'
