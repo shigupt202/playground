@@ -12,4 +12,3 @@ jobs:
         context: shigupt
     - run: 'kubectl config get-contexts'
 
-
