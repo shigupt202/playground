@@ -6,6 +6,6 @@ jobs:
     steps:
     - uses: azure/k8s-set-context@v1
       with:
-        creds: '${{ secrets.SHIGUPT_KUBECONFIG }}'
+        kubeconfig: '${{ secrets.SHIGUPT_KUBECONFIG }}'
         context: 'shigupt'
     - run: 'kubectl config view'
