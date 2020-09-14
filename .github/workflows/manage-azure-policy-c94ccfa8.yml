@@ -1,0 +1,27 @@
+name: manage-azure-policy-c94ccfa8
+on:
+  push:
+    paths:
+      - 'hmac-test/policies/Audit_virtual_machines_without_disaster_recovery_configured_0015ea4d-51ff-4ce3-8d8c-f3f8f0179a56/**'
+      - 'hmac-test/policies/SQL_Managed_Instance_TDE_protector_should_be_encrypted_with_your_own_key_048248b0-55cd-46da-b1ff-39efd52db260/**'
+      - 'hmac-test/policies/Deploy_Log_Analytics_agent_for_Linux_VMs_053d3325-282c-4e5c-b944-24faffd30d77/**'
+      - 'hmac-test/policies/Vulnerability_Assessment_settings_for_SQL_server_should_contain_an_email_address_to_receive_scan_reports_057d6cfe-9c4f-4a6d-bc60-14420ea1f1a9/**'
+      - .github/workflows/manage-azure-policy-c94ccfa8.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_c94ccfa8}}
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          hmac-test/policies/Audit_virtual_machines_without_disaster_recovery_configured_0015ea4d-51ff-4ce3-8d8c-f3f8f0179a56/**
+          hmac-test/policies/SQL_Managed_Instance_TDE_protector_should_be_encrypted_with_your_own_key_048248b0-55cd-46da-b1ff-39efd52db260/**
+          hmac-test/policies/Deploy_Log_Analytics_agent_for_Linux_VMs_053d3325-282c-4e5c-b944-24faffd30d77/**
+          hmac-test/policies/Vulnerability_Assessment_settings_for_SQL_server_should_contain_an_email_address_to_receive_scan_reports_057d6cfe-9c4f-4a6d-bc60-14420ea1f1a9/**
