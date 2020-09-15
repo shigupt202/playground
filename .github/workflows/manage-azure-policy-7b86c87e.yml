@@ -1,0 +1,25 @@
+name: manage-azure-policy-7b86c87e
+on:
+  push:
+    paths:
+      - 'tttt/policies/Use_match_condition_on_tag_value._4a95401e-9187-4309-ad2b-4d301d83b04d/**'
+      - 'tttt/policies/Audit_Linux_machines_that_have_the_specified_applications_installed_0447bc18-e2f7-4c0d-aa20-bff034275be1/**'
+      - 'tttt/policies/Azure_Cosmos_DB_allowed_locations_0473574d-2d43-4217-aefe-941fcdf7e684/**'
+      - .github/workflows/manage-azure-policy-7b86c87e.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_7b86c87e}}
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          tttt/policies/Use_match_condition_on_tag_value._4a95401e-9187-4309-ad2b-4d301d83b04d/**
+          tttt/policies/Audit_Linux_machines_that_have_the_specified_applications_installed_0447bc18-e2f7-4c0d-aa20-bff034275be1/**
+          tttt/policies/Azure_Cosmos_DB_allowed_locations_0473574d-2d43-4217-aefe-941fcdf7e684/**

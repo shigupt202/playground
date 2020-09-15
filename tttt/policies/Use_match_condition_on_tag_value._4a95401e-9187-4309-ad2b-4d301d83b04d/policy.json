@@ -1,0 +1,37 @@
+{
+ "properties": {
+  "displayName": "Use match condition on tag value.",
+  "policyType": "Custom",
+  "mode": "All",
+  "description": "Enforce a text pattern on tag value.",
+  "metadata": {
+   "category": "MyTestPolicy",
+   "gitHubPolicy": {
+    "digest": "03f9a560efc4fd0d6b0561d8e3d91c48acca32f2",
+    "repoName": "ds-ms/acr-build-helloworld-node",
+    "commitSha": "e9de4ba5d5409621ede91f13b743dc904a6c690e",
+    "runUrl": "https://github.com/ds-ms/acr-build-helloworld-node/actions/runs/249294128",
+    "filepath": "policies/Use_match_condition_on_tag_value._4a95401e-9187-4309-ad2b-4d301d83b04d"
+   },
+   "createdBy": null,
+   "createdOn": null,
+   "updatedBy": "aa95fbd3-f4c3-468e-849f-9afa925b3f8d",
+   "updatedOn": "2020-09-11T05:53:37.3803065Z"
+  },
+  "parameters": {},
+  "policyRule": {
+   "if": {
+    "not": {
+     "field": "tags.date",
+     "match": "##-???-####"
+    }
+   },
+   "then": {
+    "effect": "deny"
+   }
+  }
+ },
+ "id": "/subscriptions/c00d16c7-6c1f-4c03-9be1-6934a4c49682/providers/Microsoft.Authorization/policyDefinitions/4a95401e-9187-4309-ad2b-4d301d83b04d",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "4a95401e-9187-4309-ad2b-4d301d83b04d"
+}
