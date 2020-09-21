@@ -20,3 +20,4 @@ jobs:
 #         add-CIS-checks: true
     - name: Output
       run: cat ${{steps.scan.outputs.scan-report-path}}
+
