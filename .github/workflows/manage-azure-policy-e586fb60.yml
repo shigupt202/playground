@@ -1,0 +1,39 @@
+name: manage-azure-policy-e586fb60
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'ab/policies/Azure_Cosmos_DB_allowed_locations_0473574d-2d43-4217-aefe-941fcdf7e684/**'
+#      - 'ab/policies/SQL_Managed_Instance_TDE_protector_should_be_encrypted_with_your_own_key_048248b0-55cd-46da-b1ff-39efd52db260/**'
+#      - 'ab/policies/_Preview_:_Network_traffic_data_collection_agent_should_be_installed_on_Linux_virtual_machines_04c4380f-3fae-46e8-96c9-30193528f602/**'
+#      - 'ab/policies/Deploy_Diagnostic_Settings_for_Service_Bus_to_Log_Analytics_workspace_04d53d87-841c-4f23-8a5b-21564380b55e/**'
+#      - 'ab/policies/Deploy_Log_Analytics_agent_for_Linux_VMs_053d3325-282c-4e5c-b944-24faffd30d77/**'
+#      - .github/workflows/manage-azure-policy-e586fb60.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_e586fb60}}
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          ab/policies/Azure_Cosmos_DB_allowed_locations_0473574d-2d43-4217-aefe-941fcdf7e684/**
+          ab/policies/SQL_Managed_Instance_TDE_protector_should_be_encrypted_with_your_own_key_048248b0-55cd-46da-b1ff-39efd52db260/**
+          ab/policies/_Preview_:_Network_traffic_data_collection_agent_should_be_installed_on_Linux_virtual_machines_04c4380f-3fae-46e8-96c9-30193528f602/**
+          ab/policies/Deploy_Diagnostic_Settings_for_Service_Bus_to_Log_Analytics_workspace_04d53d87-841c-4f23-8a5b-21564380b55e/**
+          ab/policies/Deploy_Log_Analytics_agent_for_Linux_VMs_053d3325-282c-4e5c-b944-24faffd30d77/**
