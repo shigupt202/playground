@@ -6,7 +6,7 @@ jobs:
     steps:
 #     - run: echo ${{ secrets.TEST_SECRET }} | cut -c1-12
     - uses: actions/checkout@master
-    - uses: azure/k8s-set-context@users/shigupt/users/shigupt/arc-set-context
+    - uses: azure/k8s-set-context@users/shigupt/arc-set-context
       with:
         cluster-type: 'arc'
         creds: '${{ secrets.AZURE_CREDS_ONPREM }}'
