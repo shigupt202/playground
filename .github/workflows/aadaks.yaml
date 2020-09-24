@@ -6,15 +6,13 @@ jobs:
     steps:
 #     - run: echo ${{ secrets.TEST_SECRET }} | cut -c1-12
     - uses: actions/checkout@master
-    - uses: azure/login@v1
+    - uses: azure/k8s-set-context@users/shigupt/users/shigupt/arc-set-context
       with:
-        creds: '${{ secrets.AZURE_CREDS_ONPREM }}' 
-#     - uses: azure/aks-set-context@users/shigupt/arc-test
-    - uses: azure/arc-k8s-set-context@users/shigupt/testing
-      with:
+        cluster-type: 'arc'
+        creds: '${{ secrets.AZURE_CREDS_ONPREM }}'
+        token: '${{ secrets.SA_TOKEN }}'
         resource-group: 'shiguptOnpremARC'
         cluster-name: 'onpremARCClus'
-        aad-creds: '${{ secrets.AZURE_AADCREDS }}'
       
     - run: cat $KUBECONFIG
         
