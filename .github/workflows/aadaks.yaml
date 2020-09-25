@@ -9,7 +9,7 @@ jobs:
     - uses: azure/k8s-set-context@users/shigupt/arc-set-context
       with:
         cluster-type: 'arc'
-        creds: '${{ secrets.AZURE_CREDS_ONPREM }}'
+        creds: '${{ secrets.AZURE_CREDS }}'
         token: '${{ secrets.SA_TOKEN }}'
         resource-group: 'shiguptOnpremARC'
         cluster-name: 'onpremARCClus'
