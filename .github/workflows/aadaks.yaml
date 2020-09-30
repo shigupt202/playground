@@ -4,7 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-#     - run: echo ${{ secrets.TEST_SECRET }} | cut -c1-12
     - uses: actions/checkout@master
     - uses: azure/k8s-set-context@users/shigupt/arc-set-context
       with:
