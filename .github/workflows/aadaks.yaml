@@ -10,8 +10,8 @@ jobs:
         cluster-type: 'arc'
         creds: '${{ secrets.AZURE_CREDS }}'
         token: '${{ secrets.SA_TOKEN }}'
-        resource-group: 'shigupt-rg-arc-nonaad'
-        cluster-name: 'shigupt-clus-arc-nonaad'
+        resource-group: 'shiguptOnpremARC'
+        cluster-name: 'onpremARCClus'
       
     - run: cat $KUBECONFIG
         
