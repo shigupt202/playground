@@ -12,8 +12,8 @@ jobs:
         token: '${{ secrets.SA_TOKEN }}'
         resource-group: 'shiguptOnpremARC'
         cluster-name: 'onpremARCClus'
-      
-    - run: cat $KUBECONFIG
+    - uses: azure/setup-helm@v1
+    - run: helm version --client --short
         
     - run: 'kubectl apply -f $GITHUB_WORKSPACE/deployment.yaml'     
   
