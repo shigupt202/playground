@@ -15,5 +15,5 @@ jobs:
     - uses: azure/setup-helm@v1
     - run: helm version --client --short
         
-    - run: 'kubectl apply -f $GITHUB_WORKSPACE/deployment.yaml'     
+#     - run: 'kubectl apply -f $GITHUB_WORKSPACE/deployment.yaml'     
   
