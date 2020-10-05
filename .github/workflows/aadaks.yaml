@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/aks-set-context@v1
+    - uses: azure/aks-set-context@users/shigupt/changeKubeconfigPerms
       with:
         creds: '${{ secrets.AZURE_CREDS }}'
         resource-group: 'shigupt-rg'
