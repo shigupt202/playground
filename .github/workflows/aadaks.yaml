@@ -12,7 +12,7 @@ jobs:
         
 #     - run: 'cat $KUBECONFIG'
 #     - run: 'kubectl get pods'
-    - uses: azure/container-scan@v0
+    - uses: azure/container-scan@releases/v0
       with:
         image-name: nginx  
       
