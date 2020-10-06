@@ -14,5 +14,5 @@ jobs:
 #     - run: 'kubectl get pods'
     - uses: azure/container-scan@v0
       with:
-        image-name: nginx  
+        image-name: ubuntu  
       
