@@ -1,10 +1,10 @@
 name: CI
-on: [push,pull_request]
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/docker-login@v1
+    - uses: azure/docker-login@users/shigupt/updatingEnvVariableLogic
       with:
         login-server: shiguptacr.azurecr.io
         username: ${{ secrets.ACR_USERNAME }}
