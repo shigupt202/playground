@@ -5,13 +5,10 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@master
-    - uses: azure/k8s-set-context@cluster-connect
+    - uses: stigok/k8s-set-context@releases/v1
       with:
-        cluster-type: 'arc'
-        creds: '${{ secrets.AZURE_CREDS }}'
-        token: '${{ secrets.SA_TOKEN }}'
-        resource-group: 'shiguptOnpremARC'
-        cluster-name: 'onpremARCClus'
+        method: kubeconfig
+        kubeconfig: ${{ secrets.KUBECONFIG }} 
     
     - run: 'kubectl apply -f $GITHUB_WORKSPACE/deployment.yaml'     
   
