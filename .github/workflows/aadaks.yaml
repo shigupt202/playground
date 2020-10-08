@@ -4,10 +4,8 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/aks-set-context@users/shigupt/changeKubeconfigPerms
+    - uses: azure/docker-login@v1
       with:
-        creds: '${{ secrets.AZURE_CREDS }}'
-        resource-group: 'shigupt-rg'
-        cluster-name: 'shigupt'
-    - uses: azure/setup-helm@v1
-    - run: helm version --client --short
+        login-server: shiguptacr.azurecr.io
+        username: ${{ ACR_USERNAME }}
+        password: ${{ ACR_PASSWORD }}
