@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/docker-login@updatingEnvVariableLogic
+    - uses: azure/docker-login@users/shigupt/updatingEnvVariableLogic
       with:
         login-server: shiguptacr.azurecr.io
         username: ${{ secrets.ACR_USERNAME }}
