@@ -4,11 +4,13 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/aks-set-context@users/shigupt/addArcSupport
-      with:
-        creds: '${{ secrets.AZURE_CREDS }}'
-        resource-group: 'testARCrg'
-        cluster-name: 'testARCclus1'
-        arc-enabled: 'true' 
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDS_TEST }} 
+#     - uses: azure/aks-set-context@v1
+#       with:
+#         creds: '${{ secrets.AZURE_CREDS_TEST }}'
+#         resource-group: 'shigupt'
+#         cluster-name: 'shigupt-aks'
           
 
