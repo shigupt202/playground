@@ -12,5 +12,6 @@ jobs:
         creds: '${{ secrets.AZURE_CREDS_TEST }}'
         resource-group: 'shigupt'
         cluster-name: 'shigupt-clus'
+    - run: kubectl get nodes 
           
 
