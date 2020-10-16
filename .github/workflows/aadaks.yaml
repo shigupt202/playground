@@ -13,9 +13,14 @@ jobs:
         creds: '${{ secrets.AZURE_CREDS_TEST }}'
         resource-group: 'shigupt'
         cluster-name: 'shigupt-clus'
+    - uses: azure/k8s-bake@v1
+      id: bake
+      with:
+        renderEngine: helm
+        helmChart: './demo-chart'  
     - uses: azure/k8s-deploy@v1
       with:
-        manifests: deployment.yaml 
+        manifests: ${{ steps.bake.outputs.manifestsBundle }}
     - run: kubectl get deploy  
           
 
