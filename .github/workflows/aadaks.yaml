@@ -4,13 +4,13 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-      - uses: azure/login@v1
-        with:
-          creds: '${{ secrets.AZURE_CREDS_TEST }}' 
-#     - uses: azure/aks-set-context@v1
-#       with:
-#         creds: '${{ secrets.AZURE_CREDS_TEST }}'
-#         resource-group: 'shigupt'
-#         cluster-name: 'shigupt-aks'
+#       - uses: azure/login@v1
+#         with:
+#           creds: '${{ secrets.AZURE_CREDS_TEST }}' 
+    - uses: azure/aks-set-context@v1
+      with:
+        creds: '${{ secrets.AZURE_CREDS_TEST }}'
+        resource-group: 'shigupt'
+        cluster-name: 'shigupt-clus'
           
 
