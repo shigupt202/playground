@@ -17,7 +17,7 @@ jobs:
       id: bake
       with:
         renderEngine: helm
-        helmChart: './demo-chart.tar.gz'  
+        helmChart: './demo-chart/'  
     - uses: azure/k8s-deploy@v1
       with:
         manifests: ${{ steps.bake.outputs.manifestsBundle }}
