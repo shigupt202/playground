@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDS_TEST }} 
+          creds: '${{ secrets.AZURE_CREDS_TEST }}' 
 #     - uses: azure/aks-set-context@v1
 #       with:
 #         creds: '${{ secrets.AZURE_CREDS_TEST }}'
