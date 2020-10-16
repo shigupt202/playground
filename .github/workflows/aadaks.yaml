@@ -17,6 +17,8 @@ jobs:
       id: bake
       with:
         renderEngine: helm
+        overrides: |
+          .Release.name: testing
         helmChart: './demo-chart/'  
     - uses: azure/k8s-deploy@v1
       with:
