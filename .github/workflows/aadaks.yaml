@@ -7,11 +7,14 @@ jobs:
 #       - uses: azure/login@v1
 #         with:
 #           creds: '${{ secrets.AZURE_CREDS_TEST }}' 
+    - uses: actions/checkout@master
     - uses: azure/aks-set-context@v1
       with:
         creds: '${{ secrets.AZURE_CREDS_TEST }}'
         resource-group: 'shigupt'
         cluster-name: 'shigupt-clus'
-    - run: kubectl apply -f deployment.yaml 
+    - uses: azure/k8s-deploy@v1
+      with:
+        manifests: deployment.yaml 
           
 
