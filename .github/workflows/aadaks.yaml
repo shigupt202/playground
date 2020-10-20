@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@master
-    - uses: stigok/k8s-set-context@releases/v1
+    - uses: azure/k8s-set-context@releases/v1
       with:
         method: kubeconfig
         kubeconfig: ${{ secrets.KUBECONFIG }} 
