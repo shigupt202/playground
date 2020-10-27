@@ -12,4 +12,4 @@ jobs:
         cluster-name: 'shigupt'
     - uses: azure/k8s-deploy@users/shigupt/allowGlobInFiles
       with:
-        manifests: manifest/*
+        manifests: pod.yaml
