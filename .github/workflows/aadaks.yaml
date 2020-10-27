@@ -13,6 +13,6 @@ jobs:
     - uses: azure/k8s-deploy@users/shigupt/allowGlobInFiles
       with:
         manifests: |
-          '*.yaml'
           deployment.yaml
+          '*.yaml'
           
