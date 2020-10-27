@@ -14,5 +14,5 @@ jobs:
       with:
         manifests: |
           '*.yaml'
-          'deployment.yaml'
+          deployment.yaml
           
