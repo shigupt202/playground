@@ -5,9 +5,13 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@master
-    - uses: azure/k8s-set-context@v1
+    - uses: azure/aks-set-context@v1
       with:
-        method: kubeconfig
-        kubeconfig: ${{ secrets.KUBECONFIG }} 
+        creds: ${{ secrets.AZURE_CREDS }}
+        resource-group: 'shigupt-rg'
+        cluster-name: 'shigupt'
+    - uses: azure/k8s-deploy@users/shigupt/allowGlobInFiles
+      with:
+        manifests: deployment.yaml
     
-    - run: 'kubectl apply -f $GITHUB_WORKSPACE/deployment.yaml'
+#     - run: 'kubectl apply -f $GITHUB_WORKSPACE/deployment.yaml'
