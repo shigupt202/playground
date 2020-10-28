@@ -5,8 +5,8 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@v1  
-    - uses: azure/setup-kubectl@dependabot/npm_and_yarn/actions/core-1.2.6-releases
+    - uses: azure/setup-kubectl@dv1
       with:
         version: 'v1.14.8'  
-    - run: 'kubectl version'
+    - run: 'kubectl version --client'
 
