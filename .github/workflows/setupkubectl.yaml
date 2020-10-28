@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@v1  
-    - uses: azure/setup-kubectl@dv1
+    - uses: azure/setup-kubectl@v1
       with:
         version: 'v1.14.8'  
     - run: 'kubectl version --client'
