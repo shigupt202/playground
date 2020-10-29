@@ -10,6 +10,6 @@ jobs:
         creds: ${{ secrets.AZURE_CREDS }}
         resource-group: 'shigupt-rg'
         cluster-name: 'shigupt'
-    - uses: azure/k8s-deploy@users/shigupt/allowGlobInFiles
+    - uses: azure/k8s-deploy@users/shigupt/allowGlobInFilePaths
       with:
-        manifests: pod.yaml
+        manifests: manifest/*.yaml
