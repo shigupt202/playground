@@ -4,9 +4,11 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/login@v1
+    - uses: azure/aks-set-context@users/shigupt/updating-set-env
       with:
         creds: '${{ secrets.AZURE_CREDS }}'
+        resource-group: shigupt-rg
+        cluster-name: shigupt  
 #     - uses: azure/aks-set-context@users/shigupt/changeKubeconfigPerms
 #       with:
 #         creds: '${{ secrets.AZURE_CREDS }}'
