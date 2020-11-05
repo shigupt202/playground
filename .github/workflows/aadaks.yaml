@@ -4,11 +4,25 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - uses: azure/aks-set-context@users/shigupt/addArcSupport
+#       - uses: azure/login@v1
+#         with:
+#           creds: '${{ secrets.AZURE_CREDS_TEST }}' 
+    - uses: actions/checkout@master
+    - uses: azure/aks-set-context@v1
       with:
-        creds: '${{ secrets.AZURE_CREDS }}'
-        resource-group: 'testARCrg'
-        cluster-name: 'testARCclus1'
-        arc-enabled: 'true' 
+        creds: '${{ secrets.AZURE_CREDS_TEST }}'
+        resource-group: 'shigupt'
+        cluster-name: 'shigupt-clus'
+    - uses: azure/k8s-bake@v1
+      id: bake
+      with:
+        renderEngine: helm
+        overrides: |
+          .Release.name: testing
+        helmChart: './demo-chart/'  
+#     - uses: azure/k8s-deploy@v1
+#       with:
+#         manifests: ${{ steps.bake.outputs.manifestsBundle }}
+#     - run: kubectl get deploy  
           
 
