@@ -1,0 +1,51 @@
+name: manage-azure-policy-e41bd505
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'policies/A_custom_IPsec/IKE_policy_must_be_applied_to_all_Azure_virtual_network_gateway_connections_50b83b09-03da-41c1-b656-c293c914862b/**'
+#      - 'policies/Azure_Defender_for_Kubernetes_should_be_enabled_523b5cd1-3e23-492f-a539-13118b6d1e3a/**'
+#      - 'policies/Connection_throttling_should_be_enabled_for_PostgreSQL_database_servers_5345bb39-67dc-4960-a1bf-427e16b9a0bd/**'
+#      - 'policies/Azure_SignalR_Service_should_use_private_links_53503636-bcc9-4748-9663-5348217f160f/**'
+#      - 'policies/_Preview_:_Firewall_should_be_enabled_on_Key_Vault_55615ac9-af46-4a59-874e-391cc3dfb490/**'
+#      - 'policies/Web_Application_Firewall_(WAF)_should_be_enabled_for_Application_Gateway_564feb30-bf6a-4854-b4bb-0d2d2d1e6c66/**'
+#      - 'policies/CORS_should_not_allow_every_resource_to_access_your_Web_Applications_5744710e-cc2f-4ee8-8809-3b11e89f4bc9/**'
+#      - 'policies/Audit_Windows_web_servers_that_are_not_using_secure_communication_protocols_5752e6d6-1206-46d8-8ab1-ecc2f71a8112/**'
+#      - 'policies/Windows_machines_should_meet_requirements_for_System_Audit_Policies_-_Detailed_Tracking_58383b73-94a9-4414-b382-4146eb02611b/**'
+#      - 'policies/Audit_Windows_machines_on_which_Windows_Serial_Console_is_not_enabled_58c460e9-7573-4bb2-9676-339c2f2486bb/**'
+#      - 'policies/Operating_system_version_should_be_the_most_current_version_for_your_cloud_service_roles_5a913c68-0590-402c-a531-e57e19379da3/**'
+#      - .github/workflows/manage-azure-policy-e41bd505.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_e41bd505}}
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          policies/A_custom_IPsec/IKE_policy_must_be_applied_to_all_Azure_virtual_network_gateway_connections_50b83b09-03da-41c1-b656-c293c914862b/**
+          policies/Azure_Defender_for_Kubernetes_should_be_enabled_523b5cd1-3e23-492f-a539-13118b6d1e3a/**
+          policies/Connection_throttling_should_be_enabled_for_PostgreSQL_database_servers_5345bb39-67dc-4960-a1bf-427e16b9a0bd/**
+          policies/Azure_SignalR_Service_should_use_private_links_53503636-bcc9-4748-9663-5348217f160f/**
+          policies/_Preview_:_Firewall_should_be_enabled_on_Key_Vault_55615ac9-af46-4a59-874e-391cc3dfb490/**
+          policies/Web_Application_Firewall_(WAF)_should_be_enabled_for_Application_Gateway_564feb30-bf6a-4854-b4bb-0d2d2d1e6c66/**
+          policies/CORS_should_not_allow_every_resource_to_access_your_Web_Applications_5744710e-cc2f-4ee8-8809-3b11e89f4bc9/**
+          policies/Audit_Windows_web_servers_that_are_not_using_secure_communication_protocols_5752e6d6-1206-46d8-8ab1-ecc2f71a8112/**
+          policies/Windows_machines_should_meet_requirements_for_System_Audit_Policies_-_Detailed_Tracking_58383b73-94a9-4414-b382-4146eb02611b/**
+          policies/Audit_Windows_machines_on_which_Windows_Serial_Console_is_not_enabled_58c460e9-7573-4bb2-9676-339c2f2486bb/**
+          policies/Operating_system_version_should_be_the_most_current_version_for_your_cloud_service_roles_5a913c68-0590-402c-a531-e57e19379da3/**
