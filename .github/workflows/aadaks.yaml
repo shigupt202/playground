@@ -7,10 +7,7 @@ jobs:
     - uses: azure/login@v1
       with:
         creds: '${{ secrets.AZURE_CREDS }}'
-#     - uses: azure/aks-set-context@users/shigupt/changeKubeconfigPerms
-#       with:
-#         creds: '${{ secrets.AZURE_CREDS }}'
-#         resource-group: 'shigupt-rg'
-#         cluster-name: 'shigupt'
-#     - uses: azure/setup-helm@v1
-#     - run: helm version --client --short
+    - uses: azure/policy-compliance-scan@v0
+      with:
+        scopes: |
+            /subscriptions/c00d16c7-6c1f-4c03-9be1-6934a4c49682/resourceGroups/shigupt-rg
