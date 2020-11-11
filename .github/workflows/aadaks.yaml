@@ -10,4 +10,4 @@ jobs:
     - uses: azure/policy-compliance-scan@v0
       with:
         scopes: |
-            /subscriptions/c00d16c7-6c1f-4c03-9be1-6934a4c49682/resourceGroups/shigupt-rg
+            /subscriptions/c00d16c7-6c1f-4c03-9be1-6934a4c49682/resourcegroups/shigupt-rg/providers/Microsoft.ContainerService/managedClusters/sgtest1"
