@@ -14,8 +14,8 @@ jobs:
 #       continue-on-error: true
       with:
         image-name: nginx 
-        username: shivamg202
-        password: ${{ secrets.PASSWORD }}
+#         username: shivamg202
+#         password: ${{ secrets.PASSWORD }}
 #         add-CIS-checks: true
     - name: Output
       run: cat ${{steps.scan.outputs.scan-report-path}}
