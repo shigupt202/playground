@@ -1,0 +1,39 @@
+{
+ "properties": {
+  "displayName": "Test Initiatives v01",
+  "policyType": "Custom",
+  "description": "Test Initiatives v01",
+  "metadata": {
+   "version": "1.0.0",
+   "category": "Tags",
+   "gitHubPolicy": {
+    "digest": "ae2bdad41c56837d9b04f982c0c7c11ff19d19c3",
+    "repoName": "Ganeshrockz/AnotherTest",
+    "commitSha": "00cea163f6d9553dc2cbfa41207f973b75ca3db7",
+    "runUrl": "https://github.com/Ganeshrockz/AnotherTest/actions/runs/315195225",
+    "filepath": "initiatives/Test_Initiatives_v01_initiativesv01-test"
+   },
+   "createdBy": "2a6ede9b-6e5d-44e5-a91c-a65dc39f6ef5",
+   "createdOn": "2020-09-29T07:37:20.9791835Z",
+   "updatedBy": "6f8f6fe1-ab20-4c92-ac14-2543d7ed9c7a",
+   "updatedOn": "2020-10-19T09:53:51.5986521Z"
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "15596150067481323076",
+    "policyDefinitionId": "/subscriptions/c00d16c7-6c1f-4c03-9be1-6934a4c49682/providers/Microsoft.Authorization/policyDefinitions/policyAsCodeDef-v0.1",
+    "parameters": {
+     "prefix": {
+      "value": "RM"
+     },
+     "suffix": {
+      "value": "-DEV"
+     }
+    }
+   }
+  ]
+ },
+ "id": "/subscriptions/c00d16c7-6c1f-4c03-9be1-6934a4c49682/providers/Microsoft.Authorization/policySetDefinitions/initiativesv01-test",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "initiativesv01-test"
+}
