@@ -12,4 +12,6 @@ jobs:
         cluster-name: 'shigupt'
     - uses: azure/k8s-deploy@v1.4
       with:
-        manifests: manifest/**.yaml
+        manifests: |
+          manifest/**.yaml
+          manifest/folderx/**.yaml
