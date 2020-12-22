@@ -13,7 +13,7 @@ jobs:
       id: scan
       continue-on-error: true
       with:
-        image-name: gradle
+        image-name: nginx
         severity-threshold: UNKNOWN  
 #         username: shivamg202
 #         password: ${{ secrets.PASSWORD }}
