@@ -13,7 +13,7 @@ jobs:
       id: scan
       continue-on-error: true
       with:
-        image-name: busybox 
+        image-name: postgres 
 #         username: shivamg202
 #         password: ${{ secrets.PASSWORD }}
 #         add-CIS-checks: true
