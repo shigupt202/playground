@@ -13,7 +13,7 @@ jobs:
       id: scan
       continue-on-error: true
       with:
-        image-name: nginx
+        image-name: golang:1.12-alpine
         severity-threshold: UNKNOWN  
 #         username: shivamg202
 #         password: ${{ secrets.PASSWORD }}
