@@ -9,6 +9,5 @@ jobs:
     - uses: azure/k8s-bake@v1
       with:
         renderEngine: 'helm'
-        helmChart: 'stable/cerebro' 
-        helm-version: 'v2.17.0' 
+        helmChart: 'stable/cerebro'
       id: bake
