@@ -5,12 +5,12 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@master
-    - uses: azure/aks-set-context@v1.4
+    - uses: azure/aks-set-context@v1
       with:
         creds: ${{ secrets.AZURE_CREDS }}
         resource-group: 'shigupt-rg'
         cluster-name: 'shigupt'
-    - uses: azure/k8s-deploy@v1
+    - uses: azure/k8s-deploy@v1.4
       with:
         manifests: manifest/**/*.yaml
         images: nginx:1.15 
