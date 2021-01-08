@@ -13,4 +13,4 @@ jobs:
     - uses: azure/k8s-deploy@users/shigupt/fixImageParse
       with:
         manifests: manifest/**/*.yaml
-        images: nginx:1.16
+        images: nginx:1.14
