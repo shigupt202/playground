@@ -10,6 +10,7 @@ jobs:
         creds: ${{ secrets.AZURE_CREDS }}
         resource-group: 'shigupt-rg'
         cluster-name: 'shigupt'
-    - uses: azure/k8s-deploy@v1.4
+    - uses: azure/k8s-deploy@users/shigupt/fixImageParse
       with:
         manifests: manifest/**/*.yaml
+        images: nginx:1.17 
