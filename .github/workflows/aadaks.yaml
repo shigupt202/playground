@@ -5,14 +5,14 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@master
-    - uses: azure/aks-set-context@v1
+    - uses: azure/aks-set-context@cluster-connect
       with:
+        cluster-type: 'arc'
         creds: ${{ secrets.AZURE_CREDS }}
-        resource-group: 'shigupt-rg'
-        cluster-name: 'shigupt'
+        cluster-name: 'demo-arc-cluster'
+        resource-group: 'demo-arc-rg'
+        token: '${{ secrets.TOKEN }}'
     - uses: azure/k8s-deploy@users/shigupt/allowGlobInFiles
       with:
         manifests: |
           deployment.yaml
-          '*.yaml'
-          
