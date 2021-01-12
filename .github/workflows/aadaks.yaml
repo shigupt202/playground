@@ -12,7 +12,7 @@ jobs:
         cluster-name: 'demo-arc-cluster'
         resource-group: 'demo-arc-rg'
         token: '${{ secrets.TOKEN }}'
-    - uses: azure/k8s-deploy@users/shigupt/allowGlobInFiles
+    - uses: azure/k8s-deploy@v1
       with:
         manifests: |
           deployment.yaml
