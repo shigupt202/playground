@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@master
-    - uses: azure/aks-set-context@cluster-connect
+    - uses: azure/k8s-set-context@cluster-connect
       with:
         cluster-type: 'arc'
         creds: ${{ secrets.AZURE_CREDS }}
