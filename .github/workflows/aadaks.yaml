@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
-    - run: echo $env:AZURE_HTTP_USER_AGENT
+    - run: echo env.AZURE_HTTP_USER_AGENT
     - uses: azure/login@v1
       with:
         creds: '${{ secrets.AZURE_CREDS }}'
