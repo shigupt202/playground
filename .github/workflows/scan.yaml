@@ -6,7 +6,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1   
     - run: |
-        echo "${{ github.workspace }}/values.yaml" >> $GITHUB_PATH 
+        cat ${{ github.workspace }}/values.yaml
     - run: |
         echo $GITHUB_PATH
         cat $GITHUB_PATH
