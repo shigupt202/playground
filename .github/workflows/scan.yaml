@@ -2,10 +2,10 @@ name: CI
 on: [push]
 jobs:
   build:
-    runs-on: windows-latest       
+    runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@v1   
-    - run: echo "${{ github.workspace }}/values.yaml" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+#     - run: echo "${{ github.workspace }}/values.yaml" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
     - run: |
         echo $env:GITHUB_PATH
         cat $env:GITHUB_PATH
