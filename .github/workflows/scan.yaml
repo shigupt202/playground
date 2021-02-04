@@ -5,19 +5,6 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@v1   
-    - name: Docker build
-      run: |
-        docker build -f ${{ github.workspace }}/Dockerfile -t testimage . 
-    - uses: Azure/container-scan@releases/v0
-      name: Container scan
-      id: scan
-#       continue-on-error: true
-      with:
-        image-name: testimage 
-        username: shivamg202
-        password: ${{ secrets.PASSWORD }}
-        severity-threshold: LOW 
-#         add-CIS-checks: true
-    - name: Output
-      run: cat ${{steps.scan.outputs.scan-report-path}}
+    - run: echo "${{ github.workspace }}/values.yaml" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+    - run: echo ${{ env.key1 }}
 
