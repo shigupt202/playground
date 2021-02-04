@@ -7,6 +7,6 @@ jobs:
     - uses: actions/checkout@v1   
 #     - run: echo "${{ github.workspace }}/values.yaml" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
     - run: |
-        echo $env:GITHUB_PATH
-        cat $env:GITHUB_PATH
+        echo $GITHUB_PATH
+        cat $GITHUB_PATH
 
