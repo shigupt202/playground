@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest       
     steps:
     - uses: actions/checkout@v1   
-#     - run: echo "${{ github.workspace }}/values.yaml" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
+    - run: |
+        echo "${{ github.workspace }}/values.yaml" >> $GITHUB_PATH 
     - run: |
         echo $GITHUB_PATH
         cat $GITHUB_PATH
