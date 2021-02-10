@@ -26,9 +26,9 @@ jobs:
           fi
     - name: Create AKS cluster
       uses: Azure/cli@1.0.4
-        with:
-          inlineScript: |
-            if [ $(az aks list -g $RESOURCE_GROUP_NAME --query "[?name=='$RESOURCE_NAME'].{NAME:name}") = [] ]; then
-              az aks create -g $RESOURCE_GROUP_NAME -n $RESOURCE_NAME --location $RESOURCE_GROUP_LOCATION
-            fi
+      with:
+        inlineScript: |
+          if [ $(az aks list -g $RESOURCE_GROUP_NAME --query "[?name=='$RESOURCE_NAME'].{NAME:name}") = [] ]; then
+            az aks create -g $RESOURCE_GROUP_NAME -n $RESOURCE_NAME --location $RESOURCE_GROUP_LOCATION
+          fi
     
