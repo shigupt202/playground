@@ -29,6 +29,6 @@ jobs:
       with:
         inlineScript: |
           if [ $(az aks list -g $RESOURCE_GROUP_NAME --query "[?name=='$RESOURCE_NAME'].{NAME:name}") = [] ]; then
-            az aks create -g $RESOURCE_GROUP_NAME -n $RESOURCE_NAME --location $RESOURCE_GROUP_LOCATION
+            az aks create -g $RESOURCE_GROUP_NAME -n $RESOURCE_NAME --location $RESOURCE_GROUP_LOCATION --generate-ssh-keys
           fi
     
