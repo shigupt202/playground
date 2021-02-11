@@ -1,8 +1,6 @@
 name: CI
 on: 
-  push: 
-    branches: 
-      - users/shigupt/container-scan-test
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest       
