@@ -2,7 +2,7 @@ name: CI
 on: 
   push: 
     branches: 
-      - users/shigupt/random
+      - users/shigupt/container-scan-test
 jobs:
   build:
     runs-on: ubuntu-latest       
