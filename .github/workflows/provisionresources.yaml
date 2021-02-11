@@ -3,9 +3,10 @@ on:
 
 name: Provision azure resources
 env:
-  RESOURCE_NAME: abcd
-  RESOURCE_GROUP_NAME: shigupt-rg
-  RESOURCE_GROUP_LOCATION: eastus
+  CLUSTER_NAME: ${{ acc.CLUSTER_NAME }}
+  ACR_NAME: ${{ acc.ACR_NAME }}
+  RESOURCE_GROUP_NAME: ${{ acc.RESOURCE_GROUP }}
+  RESOURCE_GROUP_LOCATION: ${{ acc.RESOURCE_GROUP_LOCATION }}
 
 jobs:
   provision-azure-resources:
@@ -28,7 +29,14 @@ jobs:
       uses: Azure/cli@1.0.4
       with:
         inlineScript: |
-          if [ $(az aks list -g $RESOURCE_GROUP_NAME --query "[?name=='$RESOURCE_NAME'].{NAME:name}") = [] ]; then
-            az aks create -g $RESOURCE_GROUP_NAME -n $RESOURCE_NAME --location $RESOURCE_GROUP_LOCATION --generate-ssh-keys
+          if [ $(az aks list -g $RESOURCE_GROUP_NAME --query "[?name=='$CLUSTER_NAME'].{NAME:name}") = [] ]; then
+            az aks create -g $RESOURCE_GROUP_NAME -n $CLUSTER_NAME --location $RESOURCE_GROUP_LOCATION --generate-ssh-keys
           fi
-    
+    - name: Create ACR
+      uses: Azure/cli@1.0.4
+      with:
+        inlineScript: |
+          if [ $(az acr list -g $RESOURCE_GROUP_NAME --query "[?name=='$ACR_NAME'].{NAME:name}") = [] ]; then
+            az acr create -g $RESOURCE_GROUP_NAME -n $ACR_NAME --location $RESOURCE_GROUP_LOCATION
+          fi
+          
