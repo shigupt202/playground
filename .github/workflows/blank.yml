@@ -37,12 +37,12 @@ jobs:
 #         password: ${{ secrets.PASSWORD }}
       
     - uses: actions/checkout@v1      
-    - uses: azure/container-scan@releases/v0
+    - uses: azure/container-scan@users/shigupt/fixNodeNotifierJestAlert
       name: Container scan
       with:
         image-name: nginx
         add-CIS-checks: True 
-        username: shivamg202
-        password: ${{ secrets.PASSWORD }}
+#         username: shivamg202
+#         password: ${{ secrets.PASSWORD }}
         severity-threshold: LOW                                      
           
