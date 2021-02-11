@@ -1,13 +1,20 @@
-on: [push]
-
+name: CI
+on: 
+  push: 
+    branches: 
+      - users/shigupt/container-scan-test
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    
-    - uses: azure/k8s-bake@v1
+    runs-on: ubuntu-latest       
+                            
+    steps:      
+    - uses: actions/checkout@v1      
+    - uses: azure/container-scan@users/shigupt/fixNodeNotifierJestAlert
+      name: Container scan
       with:
-        renderEngine: 'helm'
-        helmChart: 'stable/cerebro'
-      id: bake
+        image-name: nginx
+        add-CIS-checks: True 
+#         username: shivamg202
+#         password: ${{ secrets.PASSWORD }}
+        severity-threshold: LOW                                      
+          
