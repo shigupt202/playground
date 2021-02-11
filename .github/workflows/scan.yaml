@@ -6,7 +6,7 @@ jobs:
                             
     steps:      
     - uses: actions/checkout@v1      
-    - uses: azure/container-scan@users/shigupt/fixNodeNotifierJestAlert
+    - uses: azure/container-scan@users/shigupt/cleanUpDevNodeModules
       name: Container scan
       with:
         image-name: nginx
