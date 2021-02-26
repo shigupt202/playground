@@ -15,5 +15,5 @@ jobs:
         password: ${{ secrets.ACR_PASSWORD }}
         severity-threshold: LOW       
       env:
-        DOCKLE_AUTH_URL: https://shiguptacr.azurecr.io
+        DOCKLE_AUTH_URL: https://registry.hub.docker.com
           
