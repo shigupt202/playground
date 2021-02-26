@@ -9,9 +9,9 @@ jobs:
     - uses: azure/container-scan@v0
       name: Container scan
       with:
-        image-name: nginx
+        image-name: shiguptacr.azurecr.io/demoimage
         add-CIS-checks: True 
-#         username: shivamg202
-#         password: ${{ secrets.PASSWORD }}
+        username: ${{ secrets.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PASSWORD }}
         severity-threshold: LOW                                      
           
