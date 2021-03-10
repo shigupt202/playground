@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest   
     strategy: 
       matrix:
-        node: ["0","1"]
+        node: ["0"]
                             
     steps:      
     - uses: actions/checkout@v1      
@@ -16,7 +16,16 @@ jobs:
         add-CIS-checks: True 
         username: ${{ secrets.ACR_USERNAME }}
         password: ${{ secrets.ACR_PASSWORD }}
-        severity-threshold: LOW       
+        severity-threshold: LOW  
+        
+    - uses: azure/container-scan@v0
+      name: Container scan
+      with:
+        image-name: shiguptacr.azurecr.io/demoimage
+        add-CIS-checks: True 
+        username: ${{ secrets.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PASSWORD }}
+        severity-threshold: LOW  
 #       env:
 #         DOCKLE_AUTH_URL: https://registry.hub.docker.com
           
