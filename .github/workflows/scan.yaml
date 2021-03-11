@@ -11,6 +11,7 @@ jobs:
     - uses: actions/checkout@v1      
     - uses: azure/container-scan@v0
       name: Container scan
+      continue-on-error: true
       with:
         image-name: shiguptacr.azurecr.io/demoimage
         add-CIS-checks: True 
