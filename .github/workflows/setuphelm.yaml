@@ -1,4 +1,4 @@
-name: CI
+name: Setup Helm
 on: [workflow_dispatch]
 jobs:
   build:
