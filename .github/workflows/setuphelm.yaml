@@ -17,3 +17,5 @@ jobs:
     - uses: azure/setup-helm@users/shigupt/addingGraphQLForVersions
       with:
         version: 'v3.4.1' 
+    env:
+      NEW_VERSION_LOGIC: 'true'
